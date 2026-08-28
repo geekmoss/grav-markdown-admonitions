@@ -5,10 +5,10 @@ version: 1.0.0
 description: Markdown admonition blocks for Grav 2.
 icon: exclamation-triangle
 author: { name: Geekmoss }
-homepage: https://github.com/your-account/markdown-admonitions
+homepage: https://github.com/geekmoss/grav-markdown-admonitions
 keywords: [markdown, admonition, callout, notice]
-bugs: https://github.com/your-account/markdown-admonitions/issues
-docs: https://github.com/your-account/markdown-admonitions/blob/main/README.md
+bugs: https://github.com/geekmoss/grav-markdown-admonitions/issues
+docs: https://github.com/geekmoss/grav-markdown-admonitions/blob/main/README.md
 license: MIT
 compatibility: { grav: ['2.0'] }
 dependencies:

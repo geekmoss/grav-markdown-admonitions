@@ -3,7 +3,7 @@
   "type": "grav-plugin",
   "description": "Markdown admonition blocks for Grav 2.",
   "keywords": ["grav", "plugin", "markdown", "admonition", "callout"],
-  "homepage": "https://github.com/your-account/markdown-admonitions",
+  "homepage": "https://github.com/geekmoss/grav-markdown-admonitions",
   "license": "MIT",
   "authors": [{"name": "Geekmoss"}],
   "require": {"php": "^8.3"},
