@@ -13,7 +13,7 @@ use RocketTheme\Toolbox\Event\Event;
 /**
  * Adds Markdown admonition blocks to Grav content.
  */
-final class AdmonitionsPlugin extends Plugin
+final class MarkdownAdmonitionsPlugin extends Plugin
 {
     public static function getSubscribedEvents(): array
     {
