@@ -1,0 +1,47 @@
+name: Build release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the tagged source
+        uses: actions/checkout@v4
+
+      - name: Build drop-in plugin archive
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          mkdir -p dist/markdown-admonitions
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='dist/' \
+            --exclude='.dockerignore' \
+            --exclude='Dockerfile' \
+            --exclude='phpunit.xml.dist' \
+            --exclude='tests/' \
+            --exclude='vendor/' \
+            ./ dist/markdown-admonitions/
+          (
+            cd dist
+            zip -r "../markdown-admonitions-${TAG_NAME}.zip" markdown-admonitions
+          )
+
+      - name: Create GitHub release and upload archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG_NAME" \
+            "markdown-admonitions-${TAG_NAME}.zip" \
+            --generate-notes \
+            --title "$TAG_NAME"
