@@ -1,0 +1,17 @@
+enabled: true
+built_in_css: true
+root_class: admonition
+class_prefix: admonition--
+types:
+  note: { label: Note, class: note, color: '#448aff', icon: info }
+  info: { label: Info, class: info, color: '#448aff', icon: info }
+  tip: { label: Tip, class: tip, color: '#00bfa5', icon: lightbulb }
+  success: { label: Success, class: success, color: '#00c853', icon: check }
+  warning: { label: Warning, class: warning, color: '#ffab00', icon: warning }
+  danger: { label: Danger, class: danger, color: '#ff5252', icon: alert }
+  question: { label: Question, class: question, color: '#7c4dff', icon: question }
+  failure: { label: Failure, class: failure, color: '#ff5252', icon: close }
+  bug: { label: Bug, class: bug, color: '#f50057', icon: bug }
+  example: { label: Example, class: example, color: '#7e57c2', icon: code }
+  quote: { label: Quote, class: quote, color: '#78909c', icon: quote }
+  abstract: { label: Abstract, class: abstract, color: '#00acc1', icon: clipboard }

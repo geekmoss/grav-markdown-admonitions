@@ -1,0 +1,20 @@
+en:
+  PLUGIN_MARKDOWN_ADMONITIONS:
+    ADMIN:
+      ENABLED: Enabled
+      BUILT_IN_CSS: Include built-in CSS
+      CSS_SECTION: Styling
+      ROOT_CLASS: Root CSS class
+      TYPE_CLASS_PREFIX: Type CSS class prefix
+      NOTE_COLOR: Note box color
+      INFO_COLOR: Info box color
+      TIP_COLOR: Tip box color
+      SUCCESS_COLOR: Success box color
+      WARNING_COLOR: Warning box color
+      DANGER_COLOR: Danger box color
+      QUESTION_COLOR: Question box color
+      FAILURE_COLOR: Failure box color
+      BUG_COLOR: Bug box color
+      EXAMPLE_COLOR: Example box color
+      QUOTE_COLOR: Quote box color
+      ABSTRACT_COLOR: Abstract box color

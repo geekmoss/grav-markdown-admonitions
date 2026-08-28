@@ -1,0 +1,39 @@
+name: Markdown Admonitions
+slug: markdown-admonitions
+type: plugin
+version: 1.0.0
+description: Markdown admonition blocks for Grav 2.
+icon: exclamation-triangle
+author: { name: Geekmoss }
+homepage: https://github.com/your-account/markdown-admonitions
+keywords: [markdown, admonition, callout, notice]
+bugs: https://github.com/your-account/markdown-admonitions/issues
+docs: https://github.com/your-account/markdown-admonitions/blob/main/README.md
+license: MIT
+compatibility: { grav: ['2.0'] }
+dependencies:
+  - { name: grav, version: '>=2.0' }
+form:
+  validation: loose
+  fields:
+    enabled: { type: toggle, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.ENABLED, highlight: 1, default: true, options: { 1: PLUGIN_ADMIN.YES, 0: PLUGIN_ADMIN.NO }, validate: { type: bool } }
+    built_in_css: { type: toggle, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.BUILT_IN_CSS, highlight: 1, default: true, options: { 1: PLUGIN_ADMIN.YES, 0: PLUGIN_ADMIN.NO }, validate: { type: bool } }
+    css:
+      type: section
+      title: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.CSS_SECTION
+      underline: true
+      fields:
+        root_class: { type: text, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.ROOT_CLASS, default: admonition, validate: { type: text, pattern: '^[A-Za-z][A-Za-z0-9_-]*$' } }
+        class_prefix: { type: text, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.TYPE_CLASS_PREFIX, default: admonition--, validate: { type: text, pattern: '^[A-Za-z][A-Za-z0-9_-]*$' } }
+        types.note.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.NOTE_COLOR, default: '#448aff', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.info.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.INFO_COLOR, default: '#448aff', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.tip.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.TIP_COLOR, default: '#00bfa5', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.success.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.SUCCESS_COLOR, default: '#00c853', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.warning.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.WARNING_COLOR, default: '#ffab00', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.danger.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.DANGER_COLOR, default: '#ff5252', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.question.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.QUESTION_COLOR, default: '#7c4dff', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.failure.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.FAILURE_COLOR, default: '#ff5252', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.bug.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.BUG_COLOR, default: '#f50057', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.example.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.EXAMPLE_COLOR, default: '#7e57c2', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.quote.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.QUOTE_COLOR, default: '#78909c', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
+        types.abstract.color: { type: colorpicker, label: PLUGIN_MARKDOWN_ADMONITIONS.ADMIN.ABSTRACT_COLOR, default: '#00acc1', validate: { type: text, pattern: '^#[0-9a-fA-F]{3,8}$' } }
